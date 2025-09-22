@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon"type="imagex/png" href="img/favicon.ico">
+    <title>Linha do tempo</title>
+    <style>
+      body {
+        background: linear-gradient(90deg, #e4e4e4ff, #b9b4b4ff);
+        color: #f5f5f5;
+      }
+      .barra {
+        background-color: #202020ff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        opacity: 90%;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        font-family: sans-serif;
+      }
+      .menu {
+        display: flex;
+        gap: 20px;
+        margin-right:auto;
+        margin-left:auto;
+      }
+      .menu a {
+        text-decoration: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px 12px;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+      .menu a:hover {
+        background-color: #444;
+      }
+      .voltar{
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px 10px;
+        border-radius: 6px;
+        transition: 0.3s;
+        margin-right:-10px;
+        z-index:2;
+      }
+      .voltar:hover {
+        background-color: #444;
+      }
+      .button{
+        cursor:pointer;
+        position:relative;
+        bottom:320px;
+        left:410px;
+        color:white;
+        background-color: #202020ff;
+        width: 200px;
+        height: 100px;
+        border-radius: 6.1px;
+      }
+      .titulo{
+        z-index: 2;
+        position:relative;
+        color:white;
+        bottom:-110px;
+        text-align: center;
+        font-size:70px;
+        text-shadow: 3px 3px 5px black;
+      }
+      .paragrafo1{
+        z-index: 2;
+        position:absolute;
+        bottom:100px;
+        font-size: 23px;
+        color:white;
+        margin:0 200px;
+        text-align: justify;
+        text-shadow: 3px 3px 5px black;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+      :root {
+        --white: #ffffffff;
+        --black: #202020ff;
+        --crystal: #1f1f1fff;
+        --columbia-blue: linear-gradient(90deg, #6d6d6dff, #1a1a1a);
+        --midnight-green: #222222ff;
+        --yellow: #d6d6d6ff;
+
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      body {
+        background: var(--columbia-blue);
+        color: var(--black);
+        margin-bottom: 50px;
+      }
+
+      /* .section SECTION
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      
+      .linha_do_tempo {
+        position: relative;
+        white-space: nowrap;
+        max-width: 100px;
+        padding: 0 10px;
+        bottom:-400px;
+        margin-left: 200px;
+        display: grid;
+        grid-template-columns: 1500px auto;
+        grid-gap: 20px;
+        width: 100px;
+        font: normal 16px/1.5 "Inter", sans-serif;
+      }
+
+      .linha_do_tempo ol li {
+        position: relative;
+        display: inline-block;
+        list-style-type: none;
+        width: 160px;
+        height: 4px;
+        background: var(--white);
+        scroll-snap-align: start;
+      }
+
+      .linha_do_tempo ol li:last-child {
+        width: 290px;
+      }
+
+      .linha_do_tempo ol li:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 1px);
+        bottom: 0;
+        width: 14px;
+        height: 14px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background: var(--midnight-green);
+        z-index: 1;
+      }
+
+      .linha_do_tempo ol li div {
+        position: absolute;
+        left: calc(100% + 7px);
+        width: 290px;
+        height: 120px; 
+        padding: 25px;
+        font-size: 1rem;
+        white-space: normal;
+        color: var(--black);
+        background: var(--white);
+        border-radius: 0 10px 10px 10px;
+        justify-content: space-between;
+      }
+
+      .linha_do_tempo ol li div::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
+
+      .linha_do_tempo ol li:nth-child(odd) div {
+        top: -16px;
+        transform: translateY(-100%);
+        border-radius: 10px 10px 10px 0;
+      }
+
+      .linha_do_tempo ol li:nth-child(odd) div::before {
+        top: 100%;
+        border-width: 8px 8px 0 0;
+        border-color: var(--white) transparent transparent transparent;
+      }
+
+      .linha_do_tempo ol li:nth-child(even) div {
+        top: calc(100% + 16px);
+      }
+
+      .linha_do_tempo ol li:nth-child(even) div::before {
+        top: -8px;
+        border-width: 18px 0 0 8px;
+        border-color: transparent transparent transparent var(--white);
+      }
+      time {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: var(--midnight-green);
+      }
+      .botaolinha {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: #202020;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 1rem;
+        transition: 0.3s ease;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .botaolinha:hover {
+        background-color: #707070ff;
+        transform: scale(1.1);
+      }
+      .rodape {
+        background-color: #202020;
+        color: white;
+        text-align: center;
+        padding: 40px 0px;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        width: 100%;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
+        margin-top:890px;
+        border:0px;
+        margin-bottom: -50px;
+      }
+      .rodape p {
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+
+<section class="linha_do_tempo">
+  <ol>
+    <li>
+      <div>
+        <time>1918</time>Fim da Primeira Guerra Mundial.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1918-1939</time>O periodo entre guerras.
+        <button class="botaolinha" onclick="location.href='entreguerra.php'">
+          <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
+            <path d="M10 17l5-5-5-5v10z"/>
+          </svg>
+        </button> 
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1919</time>Tratado de Versalhes.
+        <button class="botaolinha"onclick="location.href='Versalhes.php'">
+          <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
+            <path d="M10 17l5-5-5-5v10z"/>
+          </svg>
+        </button> 
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1919</time>A liga das Nações.
+        <button class="botaolinha"onclick="location.href='liga.php'">
+          <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
+            <path d="M10 17l5-5-5-5v10z"/>
+          </svg>
+        </button> 
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1920</time>Os loucos Anos 20.
+        <button class="botaolinha"onclick="location.href='anos20.php'">
+          <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
+            <path d="M10 17l5-5-5-5v10z"/>
+          </svg>
+        </button> 
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1929</time>A crise de 29.
+        <button class="botaolinha"onclick="location.href='Crisede29.php'">
+          <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
+            <path d="M10 17l5-5-5-5v10z"/>
+          </svg>
+        </button> 
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1939</time>Inicio da Segunda Guerra Mundial.
+      </div>
+    </li>
+    <li></li>
+  </ol>
+</section>
+
+    <div class="conteudo">
+      <h1 class="titulo">Linha do tempo</h1>
+      <p class="paragrafo1">Após a Primeira Guerra, a reconstrução trouxe frustração generalizada. O Tratado de Versalhes redesenhou fronteiras, impôs sanções rígidas à Alemanha e criou a Liga das Nações, que, sem os EUA e com pouca capacidade coercitiva, falhou em prevenir novas agressões. Nos “Loucos Anos 20”, a euforia econômica, o consumo de massa e a inovação cultural (jazz, cinema, vanguardas) conviveram com desequilíbrios financeiros latentes. Em outubro de 1929, o colapso de Wall Street desencadeou pânico bancário, contração monetária e queda do comércio — amplificados pelo padrão‑ouro —, convertendo uma recessão em Depressão global. Entre 1929 e meados dos anos 1930, desemprego em massa, deflação e falências abalaram sociedades e políticas, enquanto respostas oscilaram de austeridade a intervencionismo. Nesse ambiente de crise e ressentimento, regimes totalitários ganharam força nos anos 1930, aprofundando a instabilidade que culminaria em uma nova guerra.</p>
+    </div>
+
+    <?php
+      include_once('menu.php');
+    ?>
+   
+    <footer class="rodape">
+      <p>&copy; 2025 Todos os direitos reservados.</p>
+      <p>Desenvolvido por:</p>
+      <p>
+        Eron Eloterio de Mello,
+        Heitor Augusto Roque Paulista,
+        Lucas Carneiro Jacomelli,
+        Rafael Zella de Souza e
+        Vinicios de Faria.
+      </p>
+    </footer>
+   
+  </body> 
+</html>

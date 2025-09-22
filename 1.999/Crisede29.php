@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon"type="imagex/png" href="img/favicon.ico">
+    <title>Crise de 29</title>
+    <style>
+      body {
+        background: linear-gradient(90deg, #6d6d6dff, #1a1a1a);
+        color: #f5f5f5;
+      }
+      .barra {
+        background-color: #202020ff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        opacity: 90%;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        font-family: sans-serif;
+      }
+      .menu {
+        display: flex;
+        gap: 20px;
+        margin-right:auto;
+        margin-left:auto;
+      }
+      .menu a {
+        text-decoration: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px 12px;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+      .menu a:hover {
+        background-color: #444;
+      }
+      .voltar{
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px 10px;
+        border-radius: 6px;
+        transition: 0.3s;
+        margin-right:-10px;
+        z-index:2;
+      }
+      .voltar:hover {
+        background-color: #444;
+      }
+      .img1{
+        width: 100.8%;
+        height: 900px;
+        opacity: 60%;
+        z-index: 1;
+        position: relative;
+        box-shadow: 1px 3px 4px black;
+        margin-top:3em; 
+        margin-left: -8px;
+      }
+      .titulo{
+        z-index: 2;
+        position:absolute;
+        color:white;
+        bottom:500px;
+        left:10.3em;
+        font-size:70px;
+        text-shadow: 3px 3px 5px black;
+        margin:0 auto;
+      }
+      .texto1, .texto2 {
+        color:white;
+        margin:10px 400px;
+        font-size:20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .titulo1, .titulo2 {
+        color:white;
+        margin:35px 400px;
+        font-size:30px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .img2{
+        width: 100.8%;
+        height: 900px;
+        margin-left: -8px;
+        opacity: 40%;
+        margin-top:9em;
+        z-index: 1;
+        position: relative;
+        box-shadow: 1px 3px 4px black;
+      }
+      .tema{
+        z-index: 2;
+        position:absolute;
+        color:white;
+        bottom:-1200px;
+        left:9em;
+        font-size:70px;
+        text-shadow: 3px 3px 5px black;
+        margin:0 auto;
+      }
+      .textoA, .textoB {
+        color:white;
+        margin:30px 400px;
+        font-size:20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .tituloA, .tituloB, .tituloC {
+        color:white;
+        margin:35px 400px;
+        font-size:30px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .rodape {
+        background-color: #202020;
+        color: white;
+        text-align: center;
+        padding: 40px 0px;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        width: 100.9%;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
+        margin-top:100px;
+        border:0px;
+        margin-bottom: -50px;
+        margin-left:-10px;
+      }
+      .rodape p {
+        margin: 10px auto;
+      }
+     
+    </style>
+  </head>
+  <body style="background-color: #2e2e2e">
+
+      <h1 class="titulo">Crise de 29</h1>
+
+  <?php
+  include_once('menu.php');
+  ?>
+
+    <center>
+      <img src="img/depressao.jpg" class="img1">
+    </center>
+    <div class="texto">
+      <p class="titulo1"> 1929 – A quebra da Bolsa de Valores de Nova York (24 de outubro):</p>
+      <center>
+        <p class="texto1">Em 24 de outubro de 1929, a Bolsa de Valores de Nova York entrou em colapso no episódio conhecido como “quinta-feira negra”. Durante os anos 1920, os Estados Unidos viveram os “anos loucos”, um período de crescimento econômico, consumo em massa e forte expansão industrial. No entanto, essa prosperidade tinha bases frágeis: a agricultura estava em crise, a produção industrial gerava estoques acima da demanda e o crédito fácil alimentava uma bolha especulativa na Bolsa.
+
+Muitos investidores compravam ações a prazo, acreditando em lucros contínuos, enquanto os bancos atuavam sem regulação, misturando poupanças com investimentos arriscados. Quando os preços começaram a cair, instalou-se o pânico: milhões venderam seus papéis, a Bolsa despencou e bancos quebraram. A crise, inicialmente financeira, rapidamente atingiu toda a economia, levando ao colapso de empresas e ao desemprego em massa.</p>
+      </center>
+      <p class="titulo2">Impacto Global:</p>
+      <center>
+        <p class="texto2">Quando os preços começaram a cair, o pânico tomou conta: investidores venderam em massa, os bancos não conseguiram segurar a situação e milhares de empresas faliram. O desastre não ficou restrito aos EUA — espalhou-se rapidamente pelo mundo, já que a economia americana era central nas finanças globais.
+
+
+A crise inaugurou a Grande Depressão, que marcou a década de 1930 com desemprego em massa, queda da produção, fome e instabilidade social. Foi um choque tão profundo que obrigou os governos a mudarem sua forma de agir na economia. Nos Estados Unidos, por exemplo, o presidente Franklin D. Roosevelt implantou o New Deal, um conjunto de medidas que ampliava o papel do Estado na recuperação econômica.</p>  
+      </center>
+    </div>
+
+ <div class="grande depressão">
+        <img src="img/grandedepre.png"class="img2">
+        <h1 class="tema">A Grande Depressão</h1>
+        <p class="textoA">A Grande Depressão (1929–1939) foi a mais grave crise econômica do século XX. Ela começou com a quebra da Bolsa de Nova York e rapidamente atingiu todos os setores da economia. Milhões de pessoas perderam seus empregos, bancos faliram, empresas fecharam e agricultores foram arruinados pela queda nos preços de seus produtos. Nos Estados Unidos, cerca de um quarto da população ativa ficou desempregada.
+
+As consequências sociais foram profundas: longas filas por comida se tornaram comuns, famílias perderam suas casas e muitas tiveram de migrar em busca de trabalho. O “sonho americano” deu lugar à miséria e à desesperança.</p>
+        <p class="tituloB">Transformações e Legados da Crise:</p>
+        <p class="textoB">No plano político, a crise mostrou os limites do liberalismo econômico e fortaleceu a ideia de que o Estado precisava intervir. Nos EUA, o presidente Franklin D. Roosevelt lançou o New Deal, com investimentos em obras públicas, geração de empregos e maior regulação financeira. No mundo, a Depressão agravou tensões políticas e ajudou na ascensão de regimes autoritários, como o nazismo na Alemanha e o fascismo na Itália.
+
+A crise só começou a ser superada com a Segunda Guerra Mundial, que reativou a indústria e o comércio global. Mesmo assim, a Grande Depressão deixou marcas duradouras: transformou a forma de pensar a economia, reforçou o papel do Estado e mostrou os riscos da especulação descontrolada.</p>
+      
+    </div>
+    <footer class="rodape">
+      <p>&copy; 2025 Todos os direitos reservados.</p>
+      <p>Desenvolvido por:</p>
+      <p>
+        Eron Eloterio de Mello,
+        Heitor Augusto Roque Paulista,
+        Lucas Carneiro Jacomelli,
+        Rafael Zella de Souza e
+        Vinicios de Faria.
+      </p>
+    </footer>
+  </body>
+</html>

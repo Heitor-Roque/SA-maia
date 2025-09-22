@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon"type="imagex/png" href="img/favicon.ico">
+    <title>Entre Guerras</title>
+    <style>
+      body {
+        background: linear-gradient(90deg, #6d6d6dff, #1a1a1a);
+        color: #f5f5f5;
+      }
+      .barra {
+        background-color: #202020ff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        opacity: 90%;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        font-family: sans-serif;
+      }
+      .menu {
+        display: flex;
+        gap: 20px;
+        margin-right:auto;
+        margin-left:auto;
+      }
+      .menu a {
+        text-decoration: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px 12px;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+      .menu a:hover {
+        background-color: #444;
+      }
+      .voltar{
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px 10px;
+        border-radius: 6px;
+        transition: 0.3s;
+        margin-right:-10px;
+        z-index:2;
+      }
+      .voltar:hover {
+        background-color: #444;
+      }
+      .img1{
+        width: 100.8%;
+        height: 900px;
+        opacity: 60%;
+        z-index: 1;
+        position: relative;
+        box-shadow: 1px 3px 4px black;
+        margin-top:3em; 
+        margin-left: -8px;
+      }
+      .titulo{
+        z-index: 2;
+        position:absolute;
+        color:white;
+        bottom:500px;
+        left:9em;
+        font-size:70px;
+        text-shadow: 3px 3px 5px black;
+        margin:0 auto;
+      }
+      .texto1{
+        color:white;
+        margin:10px 400px;
+        font-size:20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .titulo1{
+        color:white;
+        margin:35px 400px;
+        font-size:30px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+
+      .golpe {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        margin: 20px auto;
+      }
+      .golpe-texto {
+        flex: 1 1 600px;
+        max-width: 630px;
+        font-size: 20px;
+        color: white;
+        text-align: justify;
+        text-shadow: 3px 3px 5px black;
+      }
+      .golpe h2{
+        color:white;
+        font-size:30px;
+        text-shadow: 3px 3px 5px black;
+        text-align: center;
+      }
+      .golpe-texto p {
+        margin-bottom: 20px;
+      }
+
+      .golpe-img {
+        flex: 1 1 300px;
+        max-width: 400px;
+        margin:30px 0;
+      }
+      .golpe-img img {
+        width: 100%;
+        height: auto;
+        border: 2px solid #e0e0e0ff;
+        box-shadow: 4px 4px 10px #000000ff;
+        border-radius: 8px;
+      }
+      .golpe-caixa{
+        background-color: #353535ff; 
+        margin: 60px 320px;         
+        padding: 30px 40px;    
+        border-radius: 15px;    
+        box-shadow: 0 0 10px #131313ff; 
+      }
+
+      .img2{
+        width: 100.8%;
+        height: 900px;
+        margin-left: -8px;
+        opacity: 40%;
+        margin-top:2em;
+        z-index: 1;
+        position: relative;
+        box-shadow: 1px 3px 4px black;
+      }
+      .tema{
+        z-index: 2;
+        position:absolute;
+        color:white;
+        bottom:-2100px;
+        left:9em;
+        font-size:70px;
+        text-shadow: 3px 3px 5px black;
+        margin:0 auto;
+      }
+      .textoA{
+        color:white;
+        margin:30px 400px;
+        font-size:20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .tituloA{
+        color:white;
+        margin:35px 400px;
+        font-size:30px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+
+      .galeria {
+        text-align: center;
+        padding: 50px 20px;
+        font-family: 'Georgia', serif;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+      .galeria h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        position: relative;
+        color: #f5f0e6;
+        font-family: 'Playfair Display', serif;
+      }
+      .galeria h2::after {
+        content: "";
+        display: block;
+        width: 200px;
+        height: 2px;
+        background: #f5f0e6;;
+        margin: 7px auto 0;
+        position: relative;
+      }
+      .galeria1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .obra {
+        background: #fff;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+      }
+      .obra img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+      .obra h3 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+        color:black;
+      }
+      .obra p {
+        font-size: 1.1em;
+        color: #444;
+      }
+      .obra:hover{
+        transform: translateY(-10px);
+      }
+      .explicacao {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 40%;
+        height: 100%;
+        background: #fff;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.5);
+        border-radius: 15px 0 0 15px;
+        padding: 20px;
+        z-index: 999;
+        overflow-y: auto;
+        transition: right 0.6s ease;
+        font-family: 'Playfair Display', serif;
+      }
+
+      .explicacao.ativo {
+        right: 0;
+      }
+
+      .explicacao img {
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+        margin:20px auto;
+        display: block;
+      }
+
+      .explicacao h3 {
+        margin-top: 2px;
+        color: #222;
+      }
+
+      .explicacao p {
+        font-size: 1.1em;
+        color: #333;
+        text-align: justify;
+        padding: 0 30px 50px 40px;
+      }
+      .rodape {
+        background-color: #202020;
+        color: white;
+        text-align: center;
+        padding: 40px 0px;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        width: 100.9%;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
+        margin-top:100px;
+        border:0px;
+        margin-bottom: -50px;
+        margin-left:-10px;
+      }
+      .rodape p {
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteudo">
+      <h1 class="titulo">ENTRE GUERRAS</h1>
+    </div>
+    <?php
+      include_once('menu.php');
+    ?>
+    <img src="img/1-Periodo-entreguerras.jpg" class="img1">
+      <div class="texto">
+        <p class="titulo1">Pós Primeira Guerra:</p>
+          <p class="texto1">Após a Primeira Guerra, a Europa estava devastada. O conflito havia deixado mais de dez milhões de mortos, milhões de feridos e um rastro de destruição econômica, especialmente em países como França, Bélgica e Alemanha. Para reorganizar o cenário internacional, foi assinado em 1919 o Tratado de Versalhes, que impôs punições severas à Alemanha, considerada a principal responsável pelo conflito. O país foi obrigado a pagar indenizações altíssimas, perdeu territórios e colônias e teve seu exército drasticamente reduzido. Essas medidas geraram um sentimento de humilhação e revolta entre os alemães, alimentando o desejo de revanche que, anos depois, fortaleceria o nazismo. Ainda nesse contexto, foi criada a Liga das Nações, uma organização internacional que pretendia evitar novos conflitos. No entanto, por não ter força militar e depender da cooperação entre os países, a Liga mostrou-se fraca e ineficaz, sendo incapaz de impedir crises futuras.</p>
+          <p class="titulo1">O que foi o Periodo Entre Guerras?</p>
+          <p class="texto1">O Período Entre Guerras (1919–1939) foi o intervalo entre a Primeira e a Segunda Guerra Mundial, marcado por grandes transformações políticas, econômicas e sociais. Nesse tempo, a Europa tentava se recuperar da destruição da Primeira Guerra, mas a crise econômica (principalmente a de 1929) gerou desemprego e miséria. Esse cenário facilitou a ascensão de regimes totalitários, como o fascismo de Mussolini na Itália, o nazismo de Hitler na Alemanha e o militarismo no Japão, enquanto a União Soviética vivia a ditadura de Stálin.</p>
+          <p class="titulo1">O que Gerou?</p>
+          <p class="texto1">O Período Entre Guerras foi marcado por uma forte crise e instabilidade que acabaram criando as condições para a eclosão da Segunda Guerra Mundial. Politicamente, o Tratado de Versalhes deixou a Alemanha humilhada, com pesadas indenizações e restrições militares, o que alimentou um desejo de revanche entre os alemães. Ao mesmo tempo, a Liga das Nações, criada para manter a paz, mostrou-se fraca e incapaz de conter agressões entre países.
+            <br>No campo econômico, a Grande Depressão de 1929 agravou a situação mundial, trazendo desemprego em massa, falência de empresas e pobreza generalizada. Essa crise fez muitas pessoas perderem a confiança nas democracias e passarem a apoiar líderes autoritários que prometiam soluções rápidas.
+            <br>Foi nesse contexto que regimes totalitários ganharam força: Hitler, na Alemanha, prometia recuperar o orgulho nacional e reverter as punições do Tratado de Versalhes; Mussolini, na Itália, defendia o expansionismo fascista; Stalin, na União Soviética, consolidava um comunismo autoritário; e o Japão buscava conquistar territórios na Ásia.
+            <br>A combinação entre crise política, econômica e social, somada ao crescimento do nacionalismo e do militarismo, fez com que esses países adotassem políticas agressivas de expansão territorial. Como as potências mundiais não reagiram de forma eficaz, esses avanços se intensificaram e acabaram levando diretamente ao início da Segunda Guerra Mundial em 1939
+          </p>
+      </div>
+      <div class="golpe-caixa">
+        <div class="golpe">
+          <div class="golpe-texto">
+            <h2 class="titulo2">Putsch de Munique</h2>
+            <p>O Putsch de Munique, também conhecido como Golpe da Cervejaria, foi uma tentativa fracassada de golpe de Estado liderada por Adolf Hitler e o Partido Nazista em 8 e 9 de novembro de 1923, na cidade de Munique, Alemanha.</p>
+            <p>Inspirado pela Marcha sobre Roma de Mussolini, Hitler tentou derrubar o governo da República de Weimar e tomar o poder à força, contando com o apoio de figuras nacionalistas e militares, como Erich Ludendorff. O plano era marchar até Berlim após tomar o controle da Baviera.</p>
+            <p>A tentativa começou em uma cervejaria (Bürgerbräukeller), onde Hitler interrompeu um comício político e anunciou o início da revolução. No dia seguinte, os nazistas marcharam pelas ruas de Munique, mas foram enfrentados pela polícia. O confronto terminou com 16 nazistas e 4 policiais mortos.</p>
+            <p>Hitler foi preso, julgado por traição e condenado a cinco anos de prisão, mas cumpriu apenas cerca de nove meses. Durante esse período, escreveu o livro "Mein Kampf", onde expôs suas ideias políticas e racistas.</p>
+          </div>
+          <div class="golpe-img">
+            <img src="img/golpe_hitler.jpg">
+            <img src="img/golpe_hitler2.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="cultura">
+          <img src="img/guernica_picasso.jpg"class="img2">
+          <h1 class="tema">CULTURA e ARTE</h1>
+          <p class="textoA">Após o fim da Primeira Guerra Mundial, o mundo enfrentou um cenário de desilusão e instabilidade, que influenciou profundamente a produção artística. A arte desse período foi marcada por uma busca constante de novas formas de expressão para representar a angústia, o caos e a complexidade da realidade. Movimentos como o Expressionismo destacaram-se por expressar emoções intensas e subjetivas, enquanto o Dadaísmo surgiu como uma reação de protesto contra a lógica e a razão, adotando uma postura de ruptura e crítica à sociedade tradicional. O Surrealismo, por sua vez, explorou o mundo dos sonhos e do inconsciente, trazendo imagens fantásticas e simbólicas que desafiaram as convenções. Além disso, o Cubismo continuou a influenciar artistas ao desconstruir formas e apresentar múltiplos pontos de vista, enquanto o Art Déco trouxe um estilo mais sofisticado e ornamental, especialmente em arquitetura e design.</p>
+          <p class="tituloA">As principais mudanças:</p>
+          <p class="textoA">Entre as principais mudanças culturais desse período, destacam-se o crescimento do cinema, que passou a ser uma importante forma de comunicação e entretenimento, com produções que exploravam tanto o expressionismo quanto as novas tecnologias do som. Na literatura, os escritores passaram a abordar temas como a fragmentação da identidade, o existencialismo e o absurdo da condição humana, refletindo o clima de incerteza da época. A música também teve um papel fundamental, especialmente com a popularização do jazz, que simbolizou a modernidade e a quebra de tradições culturais. Na arquitetura, o Movimento Moderno ganhou força ao adotar linhas retas, funcionalismo e materiais inovadores como aço e vidro, exemplificados pela escola Bauhaus e pelas obras de Le Corbusier.</p>
+
+        <section class="galeria">
+          <h2>Principais Obras</h2>
+          <div class="galeria1">
+
+            <div class="obra" data-exp="Criada em plena fase surrealista de Dalí, essa obra se tornou um dos símbolos do movimento. Os relógios derretidos representam a fluidez e a relatividade do tempo, inspirados pelas ideias da psicanálise e da teoria da relatividade. A pintura questiona a rigidez das convenções e sugere que o tempo pode se deformar conforme a percepção humana.">
+              <img src="img/a-persistencia-da-memoria-og.webp">
+              <h3>Salvador Dalí</h3>
+              <p>A Persistência da Memória(1931)</p>
+            </div>
+            
+            <div class="obra" data-exp="Magritte, mestre em provocar reflexões sobre o real, pintou esta obra como uma crítica à ilusão da percepção. O quadro mostra uma janela e, diante dela, um cavalete com uma pintura que se confunde com a paisagem externa. Assim, o artista questiona até que ponto enxergamos a realidade ou apenas representações dela.">
+              <img src="img/A-Condicao-Humana.-Rene-Magritte.-1933.webp">
+              <h3>René Magritte</h3>
+              <p>A Condição Humana(1933)</p>
+            </div>
+
+            <div class="obra" data-exp="Produzida no contexto pós-Primeira Guerra Mundial, essa pintura expressionista de Beckmann mostra uma cena de violência e desespero dentro de uma casa. Com formas distorcidas e tensas, a obra transmite a sensação de caos e brutalidade, refletindo a instabilidade política e moral da Alemanha naquele período.">
+              <img src="img/night-by-max-beckmann.webp">
+              <h3>Max Beckmann</h3>
+              <p>A Noite(1919)</p>
+            </div>
+
+            <div class="obra" data-exp="Kandinsky, pioneiro da arte abstrata, cria nesta obra uma verdadeira sinfonia visual. Inspirado pela música e pela espiritualidade, ele utiliza linhas, círculos e formas geométricas para expressar emoções sem precisar recorrer a representações figurativas. A obra marca sua fase na Bauhaus, onde buscava unir arte e racionalidade.">
+              <img src="img/composiçãoVIII.jpg">
+              <h3>Wassily Kandinsky</h3>
+              <p>Composição(1923)</p>
+            </div>
+
+            <div class="obra" data-exp="Essa obra muralista, criada no México, exalta a importância da ciência e da tecnologia para o futuro da humanidade. Rivera retrata o homem como centro do progresso, mas também denuncia desigualdades e tensões sociais. O mural é um manifesto político e cultural, que valoriza o poder transformador do coletivo.">
+              <img src="img/Libro_Los_Viejos_Abuelos_Foto_68.png">
+              <h3>Diego Rivera</h3>
+              <p>O Homem Controlando o Universo(1934)</p>
+            </div>
+
+            <div class="obra" data-exp="Essa pintura surrealista reflete os conflitos íntimos de Dalí relacionados à sexualidade. Com imagens oníricas e simbólicas, o artista mistura desejo, medo e angústia. A figura central, deformada e sonhadora, mostra como o inconsciente pode revelar sentimentos ocultos e complexos da mente humana.">
+              <img src="img/O_Grande_Masturbador.png" >
+              <h3>Salvador Dalí</h3>
+              <p>O grande Masturbador(1929)</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="explicacao" id="explicacao">
+        <button id="fechar" style="float:right; background:#444; color:white; border:none; padding:5px 10px; border-radius:5px; cursor:pointer;" class="fechar">X</button>
+        <img id="imagemExp" src="">
+        <h3 id="titulo"></h3>
+        <p id="texto"></p>
+      </div>
+
+      <script>
+        const obras = document.querySelectorAll('.obra');
+        const explicacao = document.getElementById('explicacao');
+        const titulo = document.getElementById('titulo');
+        const texto = document.getElementById('texto');
+        const imagemExp = document.getElementById('imagemExp');
+        const fechar = document.getElementById('fechar');
+
+        obras.forEach(obra => {
+          obra.addEventListener('click', () => {
+            const nome = obra.querySelector('h3').innerText + " - " + obra.querySelector('p').innerText;
+            const descricao = obra.getAttribute('data-exp');
+            const imgSrc = obra.querySelector('img').src;
+
+            titulo.innerText = nome;
+            texto.innerText = descricao;
+            imagemExp.src = imgSrc;
+
+            explicacao.classList.add('ativo');
+          });
+        });
+
+        fechar.addEventListener('click', () => {
+          explicacao.classList.remove('ativo');
+        });
+      </script>
+    <footer class="rodape">
+      <p>&copy; 2025 Todos os direitos reservados.</p>
+      <p>Desenvolvido por:</p>
+      <p>
+        Eron Eloterio de Mello,
+        Heitor Augusto Roque Paulista,
+        Lucas Carneiro Jacomelli,
+        Rafael Zella de Souza e
+        Vinicios de Faria.
+      </p>
+    </footer>
+  </body>
+</html>
