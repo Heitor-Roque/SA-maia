@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="shortcut icon"type="imagex/png" href="img/favicon.ico">
-    <title>Crise de 28</title>
+    <title>Crise de 29</title>
     <style>
       body {
         background: linear-gradient(90deg, #6d6d6dff, #1a1a1a);
