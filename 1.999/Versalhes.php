@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon"type="imagex/png" href="img/favicon.ico">
+    <title>Tratado de Versalhes</title>
+    <style>
+      body {
+        background: linear-gradient(90deg, #6d6d6dff, #1a1a1a);
+        color: #f5f5f5;
+      }
+      .barra {
+        background-color: #202020ff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        opacity: 90%;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        font-family: sans-serif;
+      }
+     .menu {
+        display: flex;
+        gap: 20px;
+        margin-right:auto;
+        margin-left:auto;
+      }
+      .menu a {
+        text-decoration: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px 12px;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+      .menu a:hover {
+        background-color: #444;
+      }
+      .voltar{
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px 10px;
+        border-radius: 6px;
+        transition: 0.3s;
+        margin-right:-10px;
+        z-index:2;
+      }
+      .voltar:hover {
+        background-color: #444;
+      }
+      .imagens{
+
+        position:relative;
+        height:600px;
+        width: 100%;
+        border-radius: 10.1px;
+
+      }
+      .img1{
+        width: 100.8%;
+        height: 900px;
+        opacity: 60%;
+        z-index: 1;
+        position: relative;
+        box-shadow: 1px 3px 4px black;
+        margin-top:3em; 
+        margin-left: -8px;
+      }
+      .titulo{
+        z-index: 2;
+        position:absolute;
+        color:white;
+        bottom:500px;
+        left: 9em;
+        font-size:70px;
+        text-shadow: 3px 3px 5px black;
+        margin:0 auto;
+      }
+      .guerra{
+        position:relative;
+        margin-left: 100px;
+        margin-top: 500px;
+        
+      }
+      * {box-sizing: border-box}
+      .mySlides {display: none}
+      img {vertical-align: middle;}
+
+
+      .texto1, .texto2 {
+        color:white;
+        margin:10px 400px;
+        font-size:20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .titulo1, .titulo2 {
+        color:white;
+        margin:35px 400px;
+        font-size:30px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .imagens{
+
+        position:relative;
+        height:600px;
+        width: 100%;
+        border-radius: 10.1px;
+        opacity:70%;
+      }
+      button{
+        cursor:pointer;
+        position:relative;
+        bottom:320px;
+        left:410px;
+        color:white;
+        background-color: #202020ff;
+        width: 200px;
+        height: 100px;
+        border-radius: 6.1px;
+      }
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        position:relative;
+        bottom:140px;
+        margin:auto;
+      }
+      .active, .dot:hover {
+        background-color: #131313ff;
+      }
+      .rodape {
+        background-color: #202020;
+        color: white;
+        text-align: center;
+        padding: 40px 0px;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        width: 100.9%;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
+        margin-top:100px;
+        border:0px;
+        margin-bottom: -50px;
+        margin-left:-10px;
+      }
+      .rodape p {
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body style="background-color: #2e2e2e">
+
+      <h1 class="titulo">Tratado de Versalhes</h1>
+    
+    <?php
+  include_once('menu.php');
+  ?>
+
+    <center>
+      <img src="img/VERSALHESFUNDO.jpg" class="img1">
+    </center>
+    <div class="texto">
+      <p class="titulo1">A Conferência de Paris (1919)</p>
+      <center>
+        <p class="texto1">Após a Primeira Guerra Mundial, a Europa enfrentava destruição material, crises políticas e o colapso de grandes impérios. A Conferência de Paris reuniu os principais líderes aliados — Wilson (EUA), Clemenceau (França), Lloyd George (Reino Unido) e Orlando/Nitti (Itália) — além de delegações do Japão e de outras potências. As negociações foram marcadas por tensões: a França queria conter a Alemanha, o Reino Unido buscava equilíbrio e comércio, os EUA defendiam uma paz justa e a Liga das Nações, o Japão exigia ganhos territoriais e igualdade racial (rejeitada), enquanto a Itália saiu frustrada, falando em “vitória mutilada”. A questão chinesa também ganhou destaque quando os direitos alemães em Shandong foram entregues ao Japão, gerando o Movimento 4 de Maio na China.<p>
+      </center>
+      <p class="titulo2">O Tratado de Versalhes</p>
+      <center>
+        <p class="texto2">O acordo final redesenhou fronteiras europeias, devolveu Alsácia-Lorena à França, criou o “Corredor Polonês” e determinou plebiscitos em regiões disputadas, além de proibir a união entre Alemanha e Áustria sem aprovação internacional. As colônias alemãs foram transformadas em mandatos administrados pelas potências vencedoras. Militarmente, a Alemanha foi severamente limitada: exército restrito a 100 mil homens, sem tanques, artilharia pesada, aviação ou submarinos, e com a Renânia desmilitarizada. Também teve de pagar pesadas reparações, fixadas em 132 bilhões de marcos-ouro, e aceitar a cláusula de culpa de guerra, que atribuía a ela a responsabilidade pelo conflito. O tratado ainda instituiu a Liga das Nações, mas sua eficácia foi comprometida pela ausência dos Estados Unidos.</p>  
+      </center>
+        <p class="titulo2">O que Gerou?</p>
+      <center>
+        <p class="texto2">O Tratado de Versalhes, assinado em 1919, teve efeitos profundos e duradouros na política internacional do século XX. Para a Alemanha, significou humilhação nacional, perdas territoriais, pesadas reparações financeiras e severas restrições militares. A cláusula de culpa de guerra (Artigo 231) foi vista como injusta e alimentou sentimentos de revanchismo e nacionalismo.</P>
+        <p class="texto2">Na economia, as reparações enfraqueceram a estabilidade alemã e contribuíram para a crise da década de 1920, marcada por hiperinflação e instabilidade social. Politicamente, o tratado deslegitimou a jovem República de Weimar, que passou a ser associada à derrota e à submissão ao “diktat” imposto pelas potências vencedoras.</p>
+        <p class="texto2">No cenário internacional, o acordo criou novos Estados na Europa Central e Oriental, mas deixou minorias nacionais insatisfeitas em diversas regiões, gerando tensões étnicas e disputas territoriais. A Liga das Nações surgiu como tentativa de garantir a paz, mas sua fragilidade — agravada pela ausência dos Estados Unidos — comprometeu sua eficácia.</p>
+        <p class="texto2">Em longo prazo, o Tratado de Versalhes ajudou a criar o ambiente que possibilitou a ascensão do nazismo e a eclosão da Segunda Guerra Mundial, sendo lembrado como um símbolo de paz punitiva que falhou em assegurar estabilidade duradoura.</p>
+      </center>
+    </div>
+    <footer class="rodape">
+      <p>&copy; 2025 Todos os direitos reservados.</p>
+      <p>Desenvolvido por:</p>
+      <p>
+        Eron Eloterio de Mello,
+        Heitor Augusto Roque Paulista,
+        Lucas Carneiro Jacomelli,
+        Rafael Zella de Souza e
+        Vinicios de Faria.
+      </p>
+    </footer>
+  </body>
+</html>
