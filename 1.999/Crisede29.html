@@ -78,20 +78,7 @@
         text-shadow: 3px 3px 5px black;
         margin:0 auto;
       }
-      .texto1, .texto2 {
-        color:white;
-        margin:10px 400px;
-        font-size:20px;
-        text-shadow: 3px 3px 5px black;
-        text-align: justify;
-      }
-      .titulo1, .titulo2 {
-        color:white;
-        margin:35px 400px;
-        font-size:30px;
-        text-shadow: 3px 3px 5px black;
-        text-align: justify;
-      }
+    
       .img2{
         width: 100.8%;
         height: 900px;
@@ -112,19 +99,51 @@
         text-shadow: 3px 3px 5px black;
         margin:0 auto;
       }
-      .textoA, .textoB {
+      .texto-caixa{
+        background-color: #353535ff;
+        margin: 60px 320px;
+        padding: 40px 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #131313ff;
+      }
+      .texto h2{
         color:white;
-        margin:30px 400px;
+        margin: 30px auto;
+        font-size:40px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .texto p{
+        color:white;
+        margin:15px auto;
         font-size:20px;
         text-shadow: 3px 3px 5px black;
         text-align: justify;
       }
-      .tituloA, .tituloB, .tituloC {
-        color:white;
-        margin:35px 400px;
-        font-size:30px;
-        text-shadow: 3px 3px 5px black;
-        text-align: justify;
+      .imgcrise{
+        height: 400px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #919191;
+        border-color: #ffffff;
+        border: 0.5px solid;
+      }
+      .img-bloco {
+        text-align: center;
+        margin: 30px;
+        max-width: 300px;
+      }
+      .container{
+        display: flex;           
+        gap: 20px;               
+        justify-content: center; 
+        align-items: flex-start; 
+        flex-wrap: wrap;
+      }
+      .descimg{
+        font-size:12px;
+        margin: 10px 10px 0 auto;
+        text-align: center;
       }
       .rodape {
         background-color: #202020;
@@ -161,40 +180,50 @@
     </div>
 
     <h1 class="titulo">Crise de 29</h1>
-    <center>
+
       <img src="img/depressao.jpg" class="img1">
-    </center>
+    
     <div class="texto">
-      <p class="titulo1"> 1929 – A quebra da Bolsa de Valores de Nova York (24 de outubro):</p>
-      <center>
-        <p class="texto1">Em 24 de outubro de 1929, a Bolsa de Valores de Nova York entrou em colapso no episódio conhecido como “quinta-feira negra”. Durante os anos 1920, os Estados Unidos viveram os “anos loucos”, um período de crescimento econômico, consumo em massa e forte expansão industrial. No entanto, essa prosperidade tinha bases frágeis: a agricultura estava em crise, a produção industrial gerava estoques acima da demanda e o crédito fácil alimentava uma bolha especulativa na Bolsa.
-
-Muitos investidores compravam ações a prazo, acreditando em lucros contínuos, enquanto os bancos atuavam sem regulação, misturando poupanças com investimentos arriscados. Quando os preços começaram a cair, instalou-se o pânico: milhões venderam seus papéis, a Bolsa despencou e bancos quebraram. A crise, inicialmente financeira, rapidamente atingiu toda a economia, levando ao colapso de empresas e ao desemprego em massa.</p>
-      </center>
-      <p class="titulo2">Impacto Global:</p>
-      <center>
-        <p class="texto2">Quando os preços começaram a cair, o pânico tomou conta: investidores venderam em massa, os bancos não conseguiram segurar a situação e milhares de empresas faliram. O desastre não ficou restrito aos EUA — espalhou-se rapidamente pelo mundo, já que a economia americana era central nas finanças globais.
-
-
-A crise inaugurou a Grande Depressão, que marcou a década de 1930 com desemprego em massa, queda da produção, fome e instabilidade social. Foi um choque tão profundo que obrigou os governos a mudarem sua forma de agir na economia. Nos Estados Unidos, por exemplo, o presidente Franklin D. Roosevelt implantou o New Deal, um conjunto de medidas que ampliava o papel do Estado na recuperação econômica.</p>  
-      </center>
+        <div class="texto-caixa">
+      <h2>A quebra da Bolsa de Valores de Nova York (24 de outubro):</h2>
+        <p>Em 24 de outubro de 1929, a Bolsa de Valores de Nova York entrou em colapso no episódio conhecido como “quinta-feira negra”. Durante os anos 1920, os Estados Unidos viveram os “anos loucos”, um período de crescimento econômico, consumo em massa e forte expansão industrial. No entanto, essa prosperidade tinha bases frágeis: a agricultura estava em crise, a produção industrial gerava estoques acima da demanda e o crédito fácil alimentava uma bolha especulativa na Bolsa.Muitos investidores compravam ações a prazo, acreditando em lucros contínuos, enquanto os bancos atuavam sem regulação, misturando poupanças com investimentos arriscados. Quando os preços começaram a cair, instalou-se o pânico: milhões venderam seus papéis, a Bolsa despencou e bancos quebraram. A crise, inicialmente financeira, rapidamente atingiu toda a economia, levando ao colapso de empresas e ao desemprego em massa.</p>
+        </div>
+    <div class="texto-caixa">
+       <h2>Impacto Global:</h2>
+        <p>Quando os preços começaram a cair, o pânico tomou conta: investidores venderam em massa, os bancos não conseguiram segurar a situação e milhares de empresas faliram. O desastre não ficou restrito aos EUA — espalhou-se rapidamente pelo mundo, já que a economia americana era central nas finanças globais.A crise inaugurou a Grande Depressão, que marcou a década de 1930 com desemprego em massa, queda da produção, fome e instabilidade social. Foi um choque tão profundo que obrigou os governos a mudarem sua forma de agir na economia. Nos Estados Unidos, por exemplo, o presidente Franklin D. Roosevelt implantou o New Deal, um conjunto de medidas que ampliava o papel do Estado na recuperação econômica.</p>  
+       </div>
     </div>
 
  <div class="grande depressão">
         <img src="img/grandedepre.png"class="img2">
         <h1 class="tema">A Grande Depressão</h1>
-        <p class="textoA">A Grande Depressão (1929–1939) foi a mais grave crise econômica do século XX. Ela começou com a quebra da Bolsa de Nova York e rapidamente atingiu todos os setores da economia. Milhões de pessoas perderam seus empregos, bancos faliram, empresas fecharam e agricultores foram arruinados pela queda nos preços de seus produtos. Nos Estados Unidos, cerca de um quarto da população ativa ficou desempregada.
-
-As consequências sociais foram profundas: longas filas por comida se tornaram comuns, famílias perderam suas casas e muitas tiveram de migrar em busca de trabalho. O “sonho americano” deu lugar à miséria e à desesperança.</p>
-        <p class="tituloB">Transformações e Legados da Crise:</p>
-        <p class="textoB">No plano político, a crise mostrou os limites do liberalismo econômico e fortaleceu a ideia de que o Estado precisava intervir. Nos EUA, o presidente Franklin D. Roosevelt lançou o New Deal, com investimentos em obras públicas, geração de empregos e maior regulação financeira. No mundo, a Depressão agravou tensões políticas e ajudou na ascensão de regimes autoritários, como o nazismo na Alemanha e o fascismo na Itália.
-
-A crise só começou a ser superada com a Segunda Guerra Mundial, que reativou a indústria e o comércio global. Mesmo assim, a Grande Depressão deixou marcas duradouras: transformou a forma de pensar a economia, reforçou o papel do Estado e mostrou os riscos da especulação descontrolada.</p>
+        <div class="texto-caixa">
+          <div class="texto">
+        <p>A Grande Depressão (1929–1939) foi a mais grave crise econômica do século XX. Ela começou com a quebra da Bolsa de Nova York e rapidamente atingiu todos os setores da economia. Milhões de pessoas perderam seus empregos, bancos faliram, empresas fecharam e agricultores foram arruinados pela queda nos preços de seus produtos. Nos Estados Unidos, cerca de um quarto da população ativa ficou desempregada.As consequências sociais foram profundas: longas filas por comida se tornaram comuns, famílias perderam suas casas e muitas tiveram de migrar em busca de trabalho. O “sonho americano” deu lugar à miséria e à desesperança.</p>
+        <h2>Transformações e Legados da Crise:</h2>
+        <p>No plano político, a crise mostrou os limites do liberalismo econômico e fortaleceu a ideia de que o Estado precisava intervir. Nos EUA, o presidente Franklin D. Roosevelt lançou o New Deal, com investimentos em obras públicas, geração de empregos e maior regulação financeira. No mundo, a Depressão agravou tensões políticas e ajudou na ascensão de regimes autoritários, como o nazismo na Alemanha e o fascismo na Itália. A crise só começou a ser superada com a Segunda Guerra Mundial, que reativou a indústria e o comércio global. Mesmo assim, a Grande Depressão deixou marcas duradouras: transformou a forma de pensar a economia, reforçou o papel do Estado e mostrou os riscos da especulação descontrolada.</p>
+        </div>
+          <div class="container">
+            <div class="img-bloco">
+             <img src="img/Lange-MigrantMother02.jpg" class="imgcrise">
+              <p class="descimg">Famílias de migrantes nos EUA, vítimas do desemprego e da fome causados pela crise econômica.</p>
+            </div>
+          <div class="img-bloco">
+              <img src="img/sopacrise.jpg" class="imgcrise">
+              <p class="descimg">Fila de pessoas em refeitório popular, símbolo do desemprego e da fome durante a Grande Depressão.</p>
+            </div>
+          <div class="img-bloco">
+              <img src="img/filadesemprego.webp" class="imgcrise">
+              <p class="descimg">Fila em Nova York durante a Grande Depressão, buscando ajuda ou alimentos. Contraste entre pobreza e brilho da publicidade após a Quebra de 1929.</p>
+            </div> 
+          </div>
+        </div>  
+        
       
-    </div>
+    
     <footer class="rodape">
       <p>&copy; 2025 Todos os direitos reservados.</p>
-      <p>Desenvolvido por:</p>
+      <p  >Desenvolvido por:</p>
       <p>
         Eron Eloterio de Mello,
         Heitor Augusto Roque Paulista,
