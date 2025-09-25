@@ -166,18 +166,12 @@
     </style>
   </head>
   <body style="background-color: #2e2e2e">
-    <div class="barra">
+    <div class="barra" id="menu"></div>
       <div>
         <a href="index.html" style="color: #f5f5f5; text-decoration: none;" class="voltar">Início</a>
       </div> 
-      <div class="menu">
-        <a href="entreguerra.html">Entre Guerras</a>
-        <a href="Versalhes.html">Tratado de Versalhes</a>
-        <a href="liga.html">Liga das Nações</a>
-        <a href="anos20.html">Loucos Anos 20</a>
-        <a href="crisede29.html">Crise de 29</a>
-      </div>
-    </div>
+
+     
 
     <h1 class="titulo">Crise de 29</h1>
 
@@ -232,5 +226,14 @@
         Vinicios de Faria.
       </p>
     </footer>
+
+    <script>
+      fetch("./menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("menu").innerHTML = data;
+        })
+        .catch(err => console.error("Erro ao carregar menu:", err));
+    </script>
   </body>
 </html>
