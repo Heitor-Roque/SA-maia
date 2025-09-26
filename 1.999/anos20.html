@@ -86,10 +86,59 @@
         box-shadow: 0 0 10px #131313ff; 
       }
 
-      .texto h2{
+      .texto1 h2{
         font-size:40px;
+      
+        
       }
-      .rodape {
+      .caixajazz{
+        background-color: #353535ff;
+        margin: 60px 320px;
+        padding: 20px 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #131313ff;
+      } .textojazz h2{
+          font-size:40px;
+          text-align: justify;
+
+      }.textojazz p{
+        color:white;
+        margin:15px auto;
+        font-size:20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+
+      }.jazzimg{
+        height: 400px;
+        width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #919191;
+        border-color: #ffffff;
+        border: 0.5px solid;
+
+      }.container{
+        display: flex;           
+        gap: 20px;               
+        justify-content: space-evenly; 
+        align-items: center; 
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }.img-bloco {
+        flex: 1;
+        text-align: center;
+        max-width: 500px;
+        margin: 30px
+
+      }.jazzimg2{
+        height: 400px;
+        width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #919191;
+        border-color: #ffffff;
+        border: 0.5px solid;
+        margin:0 auto;
+
+      }.rodape {
         background-color: #202020;
         color: white;
         text-align: center;
@@ -111,23 +160,40 @@
   <body>
     <div class="barra" id="menu"></div>
 
-    <div class="conteudo">
+    <main class="conteudo">
 
       <h1 class="titulo">Os Loucos Anos 20</h1>
     
-    </div>
+    
 
    
       <img src="img/flapperecarro.jpg" class="img1">
    <div class="texto-caixa">
-    <div class="texto">
-      <h2>O que foi:</h2>
-      <p></p>
-      <h2></h2>
+      <div class="texto1">
+        <h2>O que foi:</h2>
+        <p></p>
+        <h2></h2>
+      </div>
     </div>
-    
+    <div class="caixajazz">
+      <div class="textojazz">
+        <h2> A Era Jazz:</h2>
+        <p>O jazz age ou “ era do jazz” aconteceu no período entreguerras, foi o movimento de rebelião cultural, e modernidade da época. o jazz começou a se popularizar por causa do seu estilo contagiante e improvisado que vinha se influenciando junto com as pessoas, era um bom jeito de refletir o espírito de mudança que as pessoas estavam sentindo. O jazz foi criado nas comunidades afro-americanas há cerca de 10 anos antes de atingir o seu auge nos anos 20, isso trouxe uma visão positiva para a população negra na época, além de representar uma movimentação dos afro-americanos que viviam no sul para o norte do país para viver o sonho americano. </p>
+      </div>
+          <div class="container">
+            <div class="img-bloco">
+             <img src="img/jazz.webp" class="jazzimg">
+            </div>
+            <div class="img-bloco">
+             <img src="img/jazz2.webp" class="jazzimg2">
+            </div>
+          </div>
+      <div class="textojazz">
+        <h2>A Dança Charleston:</h2>
+
+      </div>
     </div>
-    </div>
+    </main>
 
     <footer class="rodape">
       <p>&copy; 2025 Todos os direitos reservados.</p>
