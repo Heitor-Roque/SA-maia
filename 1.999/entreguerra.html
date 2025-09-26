@@ -281,9 +281,9 @@
   <body>
     <div class="barra" id="menu"></div>
     
-    <div class="conteudo">
+    <main class="conteudo">
       <h1 class="titulo">ENTRE GUERRAS</h1>
-    </div>
+    
 
     <img src="img/1-Periodo-entreguerras.jpg" class="img1">
       <div class="texto-caixa">
@@ -374,9 +374,30 @@
         <h3 id="titulo"></h3>
         <p id="texto"></p>
       </div>
+</main>
 
-      <script>
-        const obras = document.querySelectorAll('.obra');
+    <footer class="rodape">
+      <p>&copy; 2025 Todos os direitos reservados.</p>
+      <p>Desenvolvido por:</p>
+      <p>
+        Eron Eloterio de Mello,
+        Heitor Augusto Roque Paulista,
+        Lucas Carneiro Jacomelli,
+        Rafael Zella de Souza e
+        Vinicios de Faria.
+      </p>
+    </footer>
+
+    <script>
+      
+      fetch("./menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("menu").innerHTML = data;
+        })
+        .catch(err => console.error("Erro ao carregar menu:", err));
+        
+      const obras = document.querySelectorAll('.obra');
         const explicacao = document.getElementById('explicacao');
         const titulo = document.getElementById('titulo');
         const texto = document.getElementById('texto');
@@ -399,28 +420,7 @@
 
         fechar.addEventListener('click', () => {
           explicacao.classList.remove('ativo');
-        });
-      </script>
-    <footer class="rodape">
-      <p>&copy; 2025 Todos os direitos reservados.</p>
-      <p>Desenvolvido por:</p>
-      <p>
-        Eron Eloterio de Mello,
-        Heitor Augusto Roque Paulista,
-        Lucas Carneiro Jacomelli,
-        Rafael Zella de Souza e
-        Vinicios de Faria.
-      </p>
-    </footer>
-
-    <script>
-      fetch("./menu.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("menu").innerHTML = data;
-        })
-        .catch(err => console.error("Erro ao carregar menu:", err));
-    </script>
+        });</script>
 
   </body>
 </html>
