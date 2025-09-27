@@ -108,22 +108,6 @@
         box-sizing: border-box;
       }
 
-      button {
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        outline: none;
-      }
-
-      a {
-        color: inherit;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-
       body {
         background: var(--columbia-blue);
         color: var(--black);
@@ -139,7 +123,7 @@
         max-width: 100px;
         padding: 0 10px;
         bottom:-400px;
-        margin-left: 200px;
+        margin: auto 300px;
         display: grid;
         grid-template-columns: 1500px auto;
         grid-gap: 20px;
@@ -158,7 +142,10 @@
       }
 
       .linha_do_tempo ol li:last-child {
-        width: 290px;
+        width:0;
+      }
+            .linha_do_tempo ol li:first-child {
+        width: 0;
       }
 
       .linha_do_tempo ol li:not(:last-child)::after {
@@ -255,13 +242,148 @@
         text-shadow: 3px 3px 5px black;
         text-align: justify;
       }
+      .conteudo h2{
+        color:white;
+        font-size:40px;
+        margin:10px 20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
       .conteudo-caixa{
         background-color: #353535ff;
-        margin: 540px 320px;
+        margin:540px 320px 80px 320px;
         padding: 40px 40px;
         border-radius: 15px;
         box-shadow: 0 0 10px #131313ff;
       }
+
+      .conteudo2 p{
+        color:white;
+        margin:3px 5px;
+        font-size:14px;
+        text-shadow: 3px 3px 5px black;
+        text-align: center;
+        display: inline-block;
+      }
+      .conteudo2 h2{
+        color:white;
+        font-size:30px;
+        margin:10px 11px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .conteudo2 h1{
+        color:white;
+        font-size:40px;
+        margin:10px 10px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .conteudo2 img{
+        box-shadow: 3px 3px 5px rgb(0, 0, 0);
+        width: 150px;
+        height:200px;
+        margin:10px 11px;
+        gap:30px;
+        border-radius:10px;
+        transition: transform 0.3s ease;
+      }
+      .conteudo2 img:hover{
+        transform: translateY(-5px);
+      }
+      .conteudo2 ul{
+        color:white;
+        margin:18px 40px;
+        font-size:20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .conteudo2 ul li{
+        color:white;
+        margin:15px 25px;
+        font-size:20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .conteudo-caixa2{
+        background-color: #353535ff;
+        margin:40px 980px -395px 320px;
+        padding: 40px 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #131313ff;
+      }
+      .conteudo-caixa3{
+        background-color: #353535ff;
+        margin:10px 320px 40px 980px;
+        padding: 40px 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #131313ff;
+      }
+      .conteudo-caixa4{
+        background-color: #353535ff;
+        margin:10px 320px -420px 980px;
+        padding: 40px 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #131313ff;
+      }
+      .conteudo4 p{
+        color:white;
+        margin:3px 5px;
+        font-size:14px;
+        text-shadow: 3px 3px 5px black;
+        text-align: center;
+        display: inline-block;
+      }
+      .conteudo4 h1{
+        color:white;
+        font-size:30px;
+        margin:10px 11px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .conteudo4 ul{
+        color:white;
+        margin:18px 40px;
+        font-size:20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .conteudo4 ul li{
+        color:white;
+        margin:21px 25px;
+        font-size:20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .conteudo-caixa5{
+        background-color: #353535ff;
+        margin:10px 980px 40px 320px;
+        padding: 40px 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #131313ff;
+      }
+      .conteudo-caixa6{
+        background-color: #353535ff;
+        margin:80px 320px 540px 320px;
+        padding: 40px 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #131313ff;
+      }
+      .conteudo6 p{
+        color:white;
+        margin:15px 40px;
+        font-size:20px;
+        text-shadow: 3px 3px 5px black;
+        text-align: justify;
+      }
+      .conteudo6 h2{
+        color:white;
+        font-size:40px;
+        margin:10px 0 30px 0;
+        text-shadow: 3px 3px 5px black;
+        text-align: center;
+      }
+
       .rodape {
         background-color: #202020;
         color: white;
@@ -282,7 +404,7 @@
   </head>
   <body>
     <div class="barra" id="menu"></div>
-   
+  
 <section class="linha_do_tempo">
   <ol>
     <li>
@@ -297,7 +419,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
             <path d="M10 17l5-5-5-5v10z"/>
           </svg>
-        </button> 
+        </button>
       </div>
     </li>
     <li>
@@ -307,7 +429,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
             <path d="M10 17l5-5-5-5v10z"/>
           </svg>
-        </button> 
+        </button>
       </div>
     </li>
     <li>
@@ -317,7 +439,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
             <path d="M10 17l5-5-5-5v10z"/>
           </svg>
-        </button> 
+        </button>
       </div>
     </li>
     <li>
@@ -327,7 +449,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
             <path d="M10 17l5-5-5-5v10z"/>
           </svg>
-        </button> 
+        </button>
       </div>
     </li>
     <li>
@@ -337,7 +459,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
             <path d="M10 17l5-5-5-5v10z"/>
           </svg>
-        </button> 
+        </button>
       </div>
     </li>
     <li>
@@ -348,12 +470,83 @@
     <li></li>
   </ol>
 </section>
-  <h1 class="titulo">Linha do tempo</h1>
-  <div class="conteudo-caixa">
-    <div class="conteudo">
-      <p>Após a Primeira Guerra, a reconstrução trouxe frustração generalizada. O Tratado de Versalhes redesenhou fronteiras, impôs sanções rígidas à Alemanha e criou a Liga das Nações, que, sem os EUA e com pouca capacidade coercitiva, falhou em prevenir novas agressões. Nos “Loucos Anos 20”, a euforia econômica, o consumo de massa e a inovação cultural (jazz, cinema, vanguardas) conviveram com desequilíbrios financeiros latentes. Em outubro de 1929, o colapso de Wall Street desencadeou pânico bancário, contração monetária e queda do comércio — amplificados pelo padrão‑ouro —, convertendo uma recessão em Depressão global. Entre 1929 e meados dos anos 1930, desemprego em massa, deflação e falências abalaram sociedades e políticas, enquanto respostas oscilaram de austeridade a intervencionismo. Nesse ambiente de crise e ressentimento, regimes totalitários ganharam força nos anos 1930, aprofundando a instabilidade que culminaria em uma nova guerra.</p>
+
+  <main>
+    <h1 class="titulo">Linha do tempo</h1>
+    <div class="conteudo-caixa">
+      <div class="conteudo">
+        <h2>Contexto Histórico Geral</h2>
+        <p>Após a Primeira Guerra, a reconstrução trouxe frustração generalizada. O Tratado de Versalhes redesenhou fronteiras, impôs sanções rígidas à Alemanha e criou a Liga das Nações, que, sem os EUA e com pouca capacidade coercitiva, falhou em prevenir novas agressões. Nos “Loucos Anos 20”, a euforia econômica, o consumo de massa e a inovação cultural (jazz, cinema, vanguardas) conviveram com desequilíbrios financeiros latentes. Em outubro de 1929, o colapso de Wall Street desencadeou pânico bancário, contração monetária e queda do comércio — amplificados pelo padrão‑ouro —, convertendo uma recessão em Depressão global. Entre 1929 e meados dos anos 1930, desemprego em massa, deflação e falências abalaram sociedades e políticas, enquanto respostas oscilaram de austeridade a intervencionismo. Nesse ambiente de crise e ressentimento, regimes totalitários ganharam força nos anos 1930, aprofundando a instabilidade que culminaria em uma nova guerra.</p>
+      </div>
     </div>
-  </div>
+
+    <div class="conteudo-caixa2">
+      <div class="conteudo2">
+        <h2>Personagens Importantes</h2>
+        <div>
+          <img src="img/Woodrow Wilson (1856–1924).jpg" alt="">
+          <img src="img/Adolf Hitler (1889–1945).jpg" alt="">
+          <img src="img/Benito Mussolini (1883–1945).jpg" alt="">
+        </div>
+        <p>Woodrow Wilson (1856–1924)</p>
+        <p>Adolf Hitler (1889–1945)</p>
+        <p>Benito Mussolini (1883–1945)</p>
+      </div>
+    </div>
+
+    <div class="conteudo-caixa3">
+      <div class="conteudo2">
+        <h1>Aspectos Culturais</h1>
+        <ul>
+          <li>Jazz</li>
+          <li>Cinema</li>
+          <li>Surrealismo</li>
+          <li>Modernismo</li>
+          <li>Cultura de massa</li>
+          <li>Teatro e literatura engajada</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="conteudo-caixa4">
+      <div class="conteudo4">
+        <h1>Movimentos Sociais da Época</h1>
+        <ul>
+          <li>Movimento Feminista e Sufrágio Feminino</li>
+          <li>Movimento Operário e Sindical</li>
+          <li>Movimentos Culturais e de Juventude</li>
+          <li>Movimentos Anticoloniais e Nacionalistas</li>
+          <li>Movimento Negro e pelos Direitos Civis</li>
+          <li>Movimentos Camponeses</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="conteudo-caixa5">
+      <div class="conteudo2">
+        <h1>Curiosidades</h1>
+        <ul>
+          <li>Chaplin e Hitler no cinema: Chaplin usou o filme O Grande Ditador para satirizar Hitler e criticar o autoritarismo</li>
+          <li>O jazz e sua censura: O jazz simbolizou modernidade e liberdade, mas foi censurado em regimes autoritários como o nazismo.</li>
+          <li>O rádio como meio de massa: O rádio se tornou o principal meio de comunicação, levando cultura e propaganda a milhões de pessoas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="conteudo-caixa6">
+      <div class="conteudo6">
+        <h2>Avanços científicos e tecnológicos</h2>
+        <p>O período entre guerras foi marcado por grandes transformações científicas e tecnológicas que impactaram tanto a vida cotidiana quanto a forma de pensar o mundo.</p>
+        <p>Um dos principais meios de inovação foi o rádio, que se consolidou como o mais importante veículo de comunicação de massa. Ele levou informação, entretenimento e também propaganda política a milhões de pessoas, transformando a cultura e a política.</p>
+        <p>Na ciência, destacaram-se os avanços na física moderna, com o desenvolvimento da mecânica quântica e a expansão da teoria da relatividade, que revolucionaram a compreensão da matéria, da energia e do universo. Esses conhecimentos seriam fundamentais para a criação da energia nuclear nas décadas seguintes.</p>
+        <p>Na área dos transportes, a aviação deu um salto com a consolidação da aviação comercial, possibilitando voos de longa distância e ligando continentes, o que aproximou culturas e acelerou o comércio internacional.</p>
+        <p>Outro marco foi a descoberta da penicilina, em 1928, que abriu caminho para o uso dos antibióticos e revolucionou a medicina, salvando milhões de vidas. Ao mesmo tempo, experimentos em fissão nuclear começaram a ser desenvolvidos, lançando as bases para a energia atômica.</p>
+        <p>Esses avanços mostram como, mesmo em um contexto de crises econômicas e tensões políticas, a ciência e a tecnologia continuaram a avançar, preparando o terreno para transformações ainda maiores na segunda metade do século XX.</p>
+      </div>
+    </div>
+  </main>
+
+  <main>
     <footer class="rodape">
       <p>&copy; 2025 Todos os direitos reservados.</p>
       <p>Desenvolvido por:</p>
@@ -365,6 +558,7 @@
         Vinicios de Faria.
       </p>
     </footer>
+  </main>
 
     <script>
       fetch("./menu.html")
@@ -374,6 +568,6 @@
         })
         .catch(err => console.error("Erro ao carregar menu:", err));
     </script>
-   
-  </body> 
+  
+  </body>
 </html>
